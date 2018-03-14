@@ -1,0 +1,46 @@
+MIC-2
+
+////XOR////
+
+XOR1		MAR = SP = SP - 1; RD;
+XOR2        OPC = !TOS ^ MDR;
+XOR3 		MAR = !SP; RD;
+XOR4 		TOS = TOS ^ MDR;
+XOR5 		MDR = OPC v TOS; WR; goto (MBR1);
+
+
+
+////XNOR////
+
+XNOR1 		MAR = SP = SP - 1; RD;
+XNOR2 		OPC = TOS ^ MDR;
+XNOR3 		MAR = !SP; RD;
+XNOR4 		TOS = !TOS ^ MDR;
+XNOR5 		MDR = OPC v TOS; WR; goto (MBR1);
+
+
+
+////ADD////
+
+ADD1		MAR = SP = SP - 1; RD;
+ADD2		if(MDR<TOS) goto ADD3; else goto ADD4;
+ADD3		OPC = MDR; goto ADD5;
+ADD4		OPC = TOS; TOS = MDR;
+ADD5		if(OPC==0) goto ADD6, else goto ADD7;
+ADD6		TOS = 0; goto ADD10;
+ADD7		if(OPC==1) goto ADD10;
+ADD8		TOS = TOS + TOS;
+ADD9		OPC = OPC - 1; goto ADD7;
+ADD10		MDR = TDS; WR; goto (MBR1);
+
+
+
+No MIC-2, utiliza-se uma arquitetura de 3 buses. Onde é possível a adição de qualquer registrador em qualquer outro registrador em um único ciclo.
+
+Existe uma unidade IFU (Instruction Fetch Unit) que é responsável por buscar e processar uma corrente de instruções.
+
+O MBR (Master Boot Record) está ligado ao controlador fetch. Com isso, o registrador H se torna obsoleto no MIC-2. O salto de controle de fluxo é também desnecessário pelo mesmo motivo, tendo em vista que o próprio fetch faz isso automaticamente.
+
+/////
+
+Complementarmente, no MIC-3, adicionam-se latches nas buses principais para acelerar o clock do ciclo, já que o delay máximo é menor. E diferentemente do MIC-1 e MIC-2, o MIC-3 utiliza todas as partes do datapath em todos os seus ciclos. Com isso, a taxa transferência de todas microinstruções são aceleradas.

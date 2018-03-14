@@ -1,0 +1,57 @@
+MIC-1
+
+////XOR////
+
+Main		PC = PC + 1; fetch; goto (MBR);
+
+Nop 		goto Main1;
+
+XOR1		MAR = SP = SP - 1; goto XOR2;
+XOR2		H = !TOS; RD; goto XOR3;
+XOR3		OPC = MDR ^ H; goto XOR4;
+XOR4		MAR = !SP; goto XOR5;
+XOR5		H = TOS; RD; goto XOR6;
+XOR6		TOS = H ^ MRD; goto XOR7;
+XOR7		H = TOS; goto XOR8;
+XOR8		MDR = H v OPC; WR; goto Main;
+
+
+////XNOR////
+
+Main		PC = PC + 1; fetch, goto (MBR);
+
+Nop			goto Main1;
+
+XNOR1		MAR = SP = SP - 1; goto XNOR2;
+XNOR2		H = TOS; RD; goto XNOR3;
+XNOR3		OPC = MDR ^ H; goto XNOR4;
+XNOR4		MAR = !SP; goto XOR5;
+XNOR5		H = !TOS; RD; goto XOR6;
+XNOR6		TOS = H ^ MRD; goto XNOR7;
+XNOR7		H = TOS; goto XNOR8;
+XNOR8		MDR = H v OPC; WR; goto Main;
+
+
+////ADD////
+
+Main		PC = PC + 1; fetch, goto (MBR);
+Nop			goto Main1;
+
+ADD1 		MAR = SP = SP - 1; goto ADD2;
+ADD2		H = TOS; RD; goto ADD3;
+ADD3		if(MDR<H) goto ADD4; else goto ADD5;
+ADD4		--------------------
+ADD5		OPC = H; H = MDR; goto ADD6;
+ADD6		if(OPC==0) goto ADD7; else goto ADD8;
+ADD7		H = 0; goto ADD11;
+ADD8		---------------------
+ADD9		H = H + H; goto ADD10;
+ADD10		OPC = OPC - 1; goto ADD8;
+ADD11		MDR = H; WR; goto Main;
+
+
+Na microarquitetura MIC-1, o controle de fluxo de dados é feito por registradores de 32 bits, buses, um ALU e um shifter. Os principais registradores são o MAR (Memory Address Register) e o MDR (Memory Data Register).
+
+O MAR vai ser responsável pelo intermédio de comunicação entre a CPU e o bus de endereço.
+
+O MDR é análogo ao MAR, só que o intermédio será feito entre a CPU e o bus de data.
