@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+#include <iostream>
+
+void sort(int* n, int valor)
+{
+    int p1 = 0, p2;
+
+    while(p1 < (valor - 1))
+    {
+        p2 = p1 + 1;
+
+        while(p2 < valor)
+        {
+            if(n[p2] > n[p1])
+            {
+                int temp;
+                temp = n[p2];
+                n[p2] = n[p1];
+                n[p1] = temp;
+            }
+            p2++;
+        }
+        p1++;
+    }
+}
+
+int main()
+{
+    int valor[4];
+
+    valor[0] = 100;
+    valor[1] = 1000;
+    valor[2] = 150;
+    valor[3] = 10;
+    sort(valor, 4);
+
+    fprintf(stdout, "1: %d\n", valor[0]);
+    fprintf(stdout, "2: %d\n", valor[1]);
+    fprintf(stdout, "3: %d\n", valor[2]);
+    fprintf(stdout, "4: %d\n", valor[3]);
+    return 0;
+}
