@@ -1,0 +1,7 @@
+﻿   - média, moda e mediana por atributo e instâncias
+
+    - variância e desvio padrão por atributo e instâncias
+
+    - correlação entre atributos
+
+    Gerem gráficos de 2 tipos (por exemplo: boxplot e histograma)
