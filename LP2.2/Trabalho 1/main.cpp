@@ -2,10 +2,10 @@
 using namespace std;
 
 // tamanho máximo da matriz (12, 20, 40, 80, 100, 120, 160, 200)
-#define MAX 20
+#define MAX 12
 
 // numero máximo de threads
-#define MAX_THREAD 50
+#define MAX_THREAD 15
 
 int matA[MAX][MAX];
 int matB[MAX][MAX];
@@ -14,10 +14,10 @@ int passo_incr = 0; //começando do passo incremental = 0
 
 void* multiplicacao(void* arg)
 {
-    int comp = passo_incr++; //incrementa o passo atual de acordo com o computo individual de cada thread 
+    int comp = passo_incr++; //incrementa o passo atual de acordo com o computo individual de cada thread
 
-    // cada thread calcula 1/n da multiplicação (n = num de threads)
-    for (int i = comp * MAX / 50; i < (comp + 1) * MAX / 50; i++)
+    // cada thread calcula max/n da multiplicação (onde max = tamanho da matriz e n = num de threads)
+    for (int i = comp * MAX / MAX_THREAD; i < (comp + 1) * MAX / MAX_THREAD; i++)
         for (int j = 0; j < MAX; j++)
             for (int k = 0; k < MAX; k++)
                 matP[i][j] += matA[i][k] * matB[k][j];
