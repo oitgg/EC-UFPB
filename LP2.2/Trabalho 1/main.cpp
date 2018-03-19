@@ -1,61 +1,76 @@
-#include <iostream>
-#include <ctime>
-#include <cstdlib>
-#include <pthread.h>
-
-#define DIM 200
-#define NUM_THREADS 4
+#include <bits/stdc++.h>
 using namespace std;
 
+// tamanho máximo da matriz (12, 20, 40, 80, 100, 120, 160, 200)
+#define MAX 20
 
-int matriz_A[DIM][DIM];
-int matriz_B[DIM][DIM];
-int produto[DIM][DIM];
+// numero máximo de threads
+#define MAX_THREAD 50
+
+int matA[MAX][MAX];
+int matB[MAX][MAX];
+int matP[MAX][MAX];
+int inc = 0;
+
+void* multiplicacao(void* arg)
+{
+    int comp = inc++;
+
+    // cada thread calcula 1/n da multiplicação (n = num de threads)
+    for (int i = comp * MAX / 50; i < (comp + 1) * MAX / 50; i++)
+        for (int j = 0; j < MAX; j++)
+            for (int k = 0; k < MAX; k++)
+                matP[i][j] += matA[i][k] * matB[k][j];
+}
 
 int main()
 {
-    srand(time(0));
-
-    for(int i = 0; i < DIM; i++){
-        for(int j = 0; j < DIM; j++){
-            matriz_A[i][j] = rand()%10+1;
-            matriz_B[i][j] = rand()%10+1;
+    // gera valores aleatorios pra colocar na matriz A e na matriz B
+    for (int i = 0; i < MAX; i++) {
+        for (int j = 0; j < MAX; j++) {
+            matA[i][j] = rand() % 10;
+            matB[i][j] = rand() % 10;
         }
     }
 
-    cout << "Matriz A:\n" << endl;
-    for(int i = 0; i < DIM; i++){
-        for(int j = 0; j < DIM; j++){
-            cout << matriz_A[i][j] <<" ";
-        }
-        cout << endl;
-    }
-    cout << endl;
-    cout << "Matriz B:\n" << endl;
-    for(int i = 0; i < DIM; i++){
-        for(int j = 0; j < DIM; j++){
-            cout << matriz_B[i][j] <<" ";
-        }
-        cout << endl;
-    }
-    cout << endl;
-
-
-    for(int i = 0; i < DIM ; i++){
-        for(int j = 0; j < DIM; j++){
-            for(int k = 0; k < DIM; k++){
-            produto[i][j] += matriz_A[i][k] * matriz_B[k][j];
-            }
-        }
-    }
-
-    cout << "Matriz Produto:\n" << endl;
-    for(int i = 0; i < DIM; i++){
-        for(int j = 0; j < DIM; j++){
-            cout << produto[i][j] << " ";
-        }
+    // print da matriz a
+    cout << endl
+         << "Matriz A" << endl;
+    for (int i = 0; i < MAX; i++) {
+        for (int j = 0; j < MAX; j++)
+            cout << matA[i][j] << " ";
         cout << endl;
     }
 
+    // print da matriz b
+    cout << endl
+         << "Matriz B" << endl;
+    for (int i = 0; i < MAX; i++) {
+        for (int j = 0; j < MAX; j++)
+            cout << matB[i][j] << " ";
+        cout << endl;
+    }
+
+    // declara o numero de threads predeterminado
+    pthread_t threads[MAX_THREAD];
+
+    // cria a quantidade predefinida de threads, cada uma avaliando sua própria parte
+    for (int i = 0; i < MAX_THREAD; i++) {
+        int* p;
+        pthread_create(&threads[i], NULL, multiplicacao, (void*)(p));
+    }
+
+    // juntando as threads e esperando as outras terminarem
+    for (int i = 0; i < MAX_THREAD; i++)
+        pthread_join(threads[i], NULL);
+
+    // print do resultado
+    cout << endl
+         << "Matriz Produto" << endl;
+    for (int i = 0; i < MAX; i++) {
+        for (int j = 0; j < MAX; j++)
+            cout << matP[i][j] << " ";
+        cout << endl;
+    }
     return 0;
 }
