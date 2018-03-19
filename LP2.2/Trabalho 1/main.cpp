@@ -10,11 +10,11 @@ using namespace std;
 int matA[MAX][MAX];
 int matB[MAX][MAX];
 int matP[MAX][MAX];
-int inc = 0;
+int passo_incr = 0; //começando do passo incremental = 0
 
 void* multiplicacao(void* arg)
 {
-    int comp = inc++;
+    int comp = passo_incr++; //incrementa o passo atual de acordo com o computo individual de cada thread 
 
     // cada thread calcula 1/n da multiplicação (n = num de threads)
     for (int i = comp * MAX / 50; i < (comp + 1) * MAX / 50; i++)
