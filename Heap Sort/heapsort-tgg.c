@@ -37,11 +37,12 @@ void GetNumbersfromFile(char * str, int * arr){
     fclose(f);
 }
 
+//heap max = todos os nós da árvore tem um valor maior ou igual a cada filho desse nó
 
 void heapify(int * arr, int n, int i){
     int maior = i;    // Toma o primeiro elemento como sendo o maior
-    int l = 2*i + 1;  // Left = 2*i + 1
-    int r = 2*i + 2;  // Right = 2*i + 2
+    int l = 2*i + 1;  // Left = 2*i + 1  (raíz no índice [0]) // (raíz no índice [1] = 2*i)
+    int r = 2*i + 2;  // Right = 2*i + 2 (raíz no indice [0]) // (raíz no índice [1] = 2*i + 1)
 
     // Troca se o filho da esquerda é maior que o atual "maior"
     if (l < n && *(arr+l) > *(arr+maior))
@@ -67,18 +68,18 @@ void HeapSort(int * arr, int size){
 
     int i;
     // Constrói o heap
-    for (i = size / 2 - 1; i >= 0; i--)
+    for (i = size / 2 - 1; i >= 0; i--) // Nó Pai para índice [0] = i-1/2 // Nó Pai para índice [1] = i/2
         heapify(arr, size, i);
 
     // Remove do Heap um elemento por vez
     for (i=size-1; i>=0; i--)
     {
-        // Troca a raiz com o ultimo elemento
+        // Troca a raiz com o ultimo elemento verificado pela variável auxiliar
         int aux = *arr;
         *arr = *(arr+i);
         *(arr+i) = aux;
 
-        // Reorganiza o heap
+        // Reorganiza o heap e repete enquanto a árvore não obedecer as regras de uma max heap
         heapify(arr, i, 0);
     }
 
