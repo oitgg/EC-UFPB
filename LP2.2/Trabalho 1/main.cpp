@@ -83,6 +83,7 @@ int main()
         cout << endl;
     }
     
-    cout << "\nTempo de Execucao: " << cpu_time_used << " segundo(s).\n\n";
+    cout << "\nTempo de Execucao: " << cpu_time_used << " segundo(s).\n";
+    printf("Tempo de Execucao %f segundo(s).\n\n", cpu_time_used);
     return 0;
 }
