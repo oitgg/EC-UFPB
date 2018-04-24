@@ -1,11 +1,12 @@
 #include <bits/stdc++.h>
+#include <time.h>
 using namespace std;
 
 // tamanho máximo da matriz (12, 20, 40, 80, 100, 120, 160, 200)
-#define MAX 12
+#define MAX 50
 
 // numero máximo de threads
-#define MAX_THREAD 15
+#define MAX_THREAD 50
 
 int matA[MAX][MAX];
 int matB[MAX][MAX];
@@ -25,6 +26,10 @@ void* multiplicacao(void* arg)
 
 int main()
 {
+    
+    clock_t start, end;
+    double cpu_time_used;
+    
     // gera valores aleatorios pra colocar na matriz A e na matriz B
     for (int i = 0; i < MAX; i++) {
         for (int j = 0; j < MAX; j++) {
@@ -53,12 +58,17 @@ int main()
 
     // declara o numero de threads predeterminado
     pthread_t threads[MAX_THREAD];
+    
+    start = clock();
 
     // cria a quantidade predefinida de threads, cada uma avaliando sua própria parte
     for (int i = 0; i < MAX_THREAD; i++) {
         int* p;
         pthread_create(&threads[i], NULL, multiplicacao, (void*)(p));
     }
+    
+    end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
 
     // juntando as threads e esperando as outras terminarem
     for (int i = 0; i < MAX_THREAD; i++)
@@ -72,5 +82,8 @@ int main()
             cout << matP[i][j] << " ";
         cout << endl;
     }
+    
+    cout << "\nTempo de Execucao: " << cpu_time_used << " segundo(s).\n";
+    printf("Tempo de Execucao %f segundo(s).\n\n", cpu_time_used);
     return 0;
 }
