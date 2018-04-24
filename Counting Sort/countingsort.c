@@ -1,7 +1,7 @@
 /*Aluno: Thiago Gonzaga Gomes
 Matricula: 11504760
 Análise e Projeto de Algoritmos
-Implementação do Merge Sort*/
+Implementação do Counting Sort*/
 
 #include "stdio.h"
 #include "stdlib.h"
