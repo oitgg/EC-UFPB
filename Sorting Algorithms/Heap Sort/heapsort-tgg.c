@@ -1,10 +1,10 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <time.h>
 
 /*Aluno: Thiago Gonzaga Gomes
 Matricula: 11504760
 Análise e Projeto de Algoritmos
-Implementação do Heap Sort*/
+Implementação do Heap Sort */
 
 int countfile(char * str, int * max){
     FILE *f;
