@@ -22,6 +22,7 @@ int main() {
     Parque *parque = new Parque(numPessoas); //Prepara a thread do parque.
     FETCHANDADD *fetchandadd = new FETCHANDADD(); //Prepara o Fetch-And-Add (Ticket).
     Carro *carro = new Carro(*parque , *fetchandadd); //Cria um novo carro.
+
     Passageiro pass(*carro, *fetchandadd); //Inicializa a thread do passageiro.
     std::thread tCarro = std::thread(&Carro::run, carro); //Inicializa a rotina do carro.
     std::thread *tPassageiro = new std::thread [numPessoas]; //Inicializa a rotina dos pasaageiros.

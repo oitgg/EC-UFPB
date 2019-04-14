@@ -4,7 +4,7 @@
 
 int TempoRand, ficha = 1; //Inicializa a variável do tempo aleatório e inicializa a ficha com 1.
 
-Passageiro::Passageiro(Caror &c, FETCHANDADD &a) : carro(c), fetchandadd(a) {
+Passageiro::Passageiro(Carro &c, FETCHANDADD &a) : carro(c), fetchandadd(a) {
 }
 
 Passageiro::~Passageiro() {

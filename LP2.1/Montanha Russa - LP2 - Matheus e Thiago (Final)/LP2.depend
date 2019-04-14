@@ -72,25 +72,3 @@
 	<windows.h>
 	<iostream>
 
-1494004508 source:c:\users\sgonzaganeto\downloads\thiago\lp2\montanha russa - lp2 - matheus e thiago (final)\carro.cpp
-	"carro.h"
-	"passageiro.h"
-	<unistd.h>
-	<windows.h>
-
-1493944818 c:\users\sgonzaganeto\downloads\thiago\lp2\montanha russa - lp2 - matheus e thiago (final)\carro.h
-	<iostream>
-	<thread>
-	<pthread.h>
-	"parque.h"
-	<mutex>
-
-1494002369 c:\users\sgonzaganeto\downloads\thiago\lp2\montanha russa - lp2 - matheus e thiago (final)\parque.h
-
-1494005271 c:\users\sgonzaganeto\downloads\thiago\lp2\montanha russa - lp2 - matheus e thiago (final)\passageiro.h
-	"carro.h"
-	<cstdlib>
-
-1493941610 source:c:\users\sgonzaganeto\downloads\thiago\lp2\montanha russa - lp2 - matheus e thiago (final)\parque.cpp
-	"parque.h"
-

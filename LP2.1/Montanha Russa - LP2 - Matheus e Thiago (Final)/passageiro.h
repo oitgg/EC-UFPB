@@ -6,7 +6,7 @@
 
 class Passageiro {
     Carro &carro;
-    FETCHANDADD &fetchandadd; //Ticket
+    FETCHANDADD &fetchandadd;
     int id;
 
  public:
