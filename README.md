@@ -1,6 +1,6 @@
 # BD-IGLike Backend
 
-Servidor API para o frontend da aplicação construído em Rails, o backend da aplicação pode ser encontrado [neste repositório](https://github.com/oitgg/bd-iglike-front).
+Servidor API para o frontend da aplicação construído em Rails, que pode ser encontrado [neste repositório](https://github.com/oitgg/bd-iglike-front).
 
 ## Requisitos
 Rails + RVM (Ruby 2.3.1) [Como Instalar o RVM](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rvm-on-ubuntu-16-04)
