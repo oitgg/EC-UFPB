@@ -15,7 +15,7 @@ Utiliza:
 
 ### Servidor API (Backend)
 
-É preciso rodar um servidor Rails localmente, que está localizado no outro repositório:[Backend](https://github.com/oitgg/bd-iglike-back)
+É preciso rodar um servidor Rails localmente, que está localizado no outro [Repositório](https://github.com/oitgg/bd-iglike-back).
 
 Após clonar o repositório, rode os servidores PostgreSQL, Redis e Rails.
 O servidor Rails deve escutar na porta 5000.
