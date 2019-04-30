@@ -1,6 +1,6 @@
 # BD-IGLike Backend
 
-Servidor API para o front da aplicação construído em Rails
+Servidor API para o frontend da aplicação construído em Rails, o backend da aplicação pode ser encontrado [Neste repositório](https://github.com/oitgg/bd-iglike-front)
 
 ## Requisitos
 Rails + RVM (Ruby 2.3.1) [Como Instalar o RVM](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rvm-on-ubuntu-16-04)
@@ -16,7 +16,7 @@ git clone
 
 Rode os servidores PostgreSQL e Redis.
 
-Deopis execute a criação do bundle:
+Depois execute a criação do bundle:
 
 ```
 bundle install
