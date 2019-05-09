@@ -1,0 +1,14 @@
+.FacebookLoginButton__button {
+  font-size: 18px !important;
+  text-transform: none;
+  font-weight: normal;
+  border: none;
+}
+
+.FacebookLoginButton__icon {
+  color: #3b5998;
+}
+
+.FacebookLoginButton__spinner {
+  font-size: 18px;
+}
