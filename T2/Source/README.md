@@ -1,0 +1,1 @@
+Para compilar, ```$ make all```
