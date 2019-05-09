@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>imagens/canvas.jpg</file>
+        <file>imagens/cir.png</file>
+        <file>imagens/hex.png</file>
+        <file>imagens/ret.png</file>
+        <file>imagens/tri.png</file>
+    </qresource>
+</RCC>
