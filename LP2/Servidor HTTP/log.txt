@@ -1,0 +1,106 @@
+---------------- REQUISICAO
+Client IP:66.50.28.255
+GET /arquivo.txt HTTP/1.1
+Host: localhost:22222
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4
+
+
+HTTP/1.1 200 OK 
+Date: 17-06-2016 04:20:22
+Server: Apache/2.2.14 (Win) 
+Content-Length:23
+Content-Type: text/plain
+Connection: Closed
+
+---------------- REQUISICAO
+Client IP:66.50.28.255
+GET /arquivo.html HTTP/1.1
+Host: localhost:22222
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4
+
+
+HTTP/1.1 200 OK 
+Date: 17-06-2016 04:20:27
+Server: Apache/2.2.14 (Win) 
+Content-Length:101
+Content-Type: text/html
+Connection: Closed
+
+---------------- REQUISICAO
+Client IP:66.50.28.255
+GET /image.jpg HTTP/1.1
+Host: localhost:22222
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4
+
+
+
+
+HTTP/1.1 200 OK 
+Date: 17-06-2016 04:20:32
+Server: Apache/2.2.14 (Win) 
+Content-Length:522702
+Content-Type: image/jpeg
+Connection: Closed
+
+---------------- REQUISICAO
+Client IP:66.50.28.255
+GET /image3.jpg HTTP/1.1
+Host: localhost:22222
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4
+
+
+
+HTTP/1.1 404 Not Found
+Date: 17-06-2016 04:20:39
+ Server: Apache/2.2.14 (Win) 
+Content-Length: 0
+Content-Type: image/jpeg
+Connection: Closed
+
+---------------- REQUISICAO
+Client IP:66.50.28.255
+GET /image3.jpg HTTP/1.1
+Host: localhost:22222
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4
+
+Ë7Ž
+HTTP/1.1 404 Not Found
+Date: 17-06-2016 04:20:52
+ Server: Apache/2.2.14 (Win) 
+Content-Length: 0
+Content-Type: image/jpeg
+Connection: Closed
+
+HTTP/1.1 400 Bad Request
+Date: 17-06-2016 04:20:52
+ Server: Apache/2.2.14 (Win) 
+Content-Type: text/html
+Connection: Closed.
+
