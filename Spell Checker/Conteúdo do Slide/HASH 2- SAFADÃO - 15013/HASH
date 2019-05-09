@@ -1,0 +1,19 @@
+unsigned int hash_function(const char* word)
+{
+    unsigned long h;
+    unsigned const char *us;
+
+    us = (unsigned const char *) word;
+
+    h = 0;
+
+    while(*us != '\0')
+    {
+        h = (h * 151 + *us) % HASH_SIZE; // h vai assumir o valor no loop * 151 (base) + a soma do ASCII dividido por um número de buckets(numero primo)
+        us++;
+    }
+
+    return h;
+}
+
+15013 buckets

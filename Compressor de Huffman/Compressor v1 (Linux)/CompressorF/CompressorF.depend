@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1479519528 source:/home/tgg/Desktop/ED/CompressorF (Linux)/CompressorF/huffman.c
+	<errno.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"huffman.h"
+	"tree.h"
+	"io.h"
+	"types.h"
+
+1479519524 /home/tgg/Desktop/ED/CompressorF (Linux)/CompressorF/huffman.h
+	"types.h"
+
+1479518300 /home/tgg/Desktop/ED/CompressorF (Linux)/CompressorF/types.h
+	<features.h>
+	<stdlib.h>
+	<sys/types.h>
+	"uchar.h"
+	<sys/time.h>
+	<sys/param.h>
+	<netinet/in.h>
+
+1479437092 /home/tgg/Desktop/ED/CompressorF (Linux)/CompressorF/tree.h
+
+1479519524 /home/tgg/Desktop/ED/CompressorF (Linux)/CompressorF/io.h
+	"types.h"
+
+1479519522 source:/home/tgg/Desktop/ED/CompressorF (Linux)/CompressorF/io.c
+	<sys/stat.h>
+	<stdio.h>
+	"io.h"
+	"types.h"
+
+1479437064 source:/home/tgg/Desktop/ED/CompressorF (Linux)/CompressorF/main.c
+	<stdio.h>
+	<string.h>
+	"io.h"
+	"huffman.h"
+
+1479437084 source:/home/tgg/Desktop/ED/CompressorF (Linux)/CompressorF/tree.c
+	<stdlib.h>
+	"tree.h"
+

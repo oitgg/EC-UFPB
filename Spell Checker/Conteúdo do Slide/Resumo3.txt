@@ -1,0 +1,30 @@
+Buckets: 8209
+
+
+unsigned int hash_function(const char* word)
+{
+    unsigned long h;
+    unsigned const char *us;
+
+    us = (unsigned const char *) word;
+
+    h = 0;
+
+    while(*us != '\0')
+    {
+        h = (h * 151 + *us) % HASH_SIZE; // h vai assumir o valor no loop * 151 (base) + a soma do ASCII dividido por um número de buckets(numero primo)
+        us++;
+    }
+
+    return h;
+}
+
+
+
+PALAVRAS INCORRETAS: 303855
+PALAVRAS NO DICIONARIO: 307855
+PALAVRAS NO TEXTO: 760222
+TEMPO PARA CARREGAR O DICIONARIO EM MEMORIA: 236.00 ms
+TEMPO DE COMPARACAO TEXTO-DICIONARIO: 4136.00 ms
+TEMPO PARA DESCARREGAR O DICIONARIO DA MEMORIA: 52.00 ms
+TEMPO TOTAL: 4424.00 ms

@@ -1,0 +1,31 @@
+Buckets: 29409
+
+
+
+Função:
+
+unsigned int hash_function(const char* word)
+{
+    unsigned int h;
+
+
+    h = 0;
+
+    for(int i = 0; word[i] != '\0'; i++)
+    {
+        h = 31 * h + word[i];
+    }
+
+    return h % HASH_SIZE;
+}
+
+
+
+
+PALAVRAS INCORRETAS: 303855
+PALAVRAS NO DICIONARIO: 307855
+PALAVRAS NO TEXTO: 760222
+TEMPO PARA CARREGAR O DICIONARIO EM MEMORIA: 160.00 ms
+TEMPO DE COMPARACAO TEXTO-DICIONARIO: 1984.00 ms
+TEMPO PARA DESCARREGAR O DICIONARIO DA MEMORIA: 64.00 ms
+TEMPO TOTAL: 2208.00 ms

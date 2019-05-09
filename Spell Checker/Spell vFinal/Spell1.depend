@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1474378740 source:/home/tgg/Desktop/Spell1/Spell1/dictionary.c
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"dictionary.h"
+
+1474127600 /home/tgg/Desktop/Spell1/Spell1/dictionary.h
+	<stdbool.h>
+
+1474422916 source:/home/tgg/Desktop/ED/Spell1/Spell1/dictionary.c
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"dictionary.h"
+
+1474127600 /home/tgg/Desktop/ED/Spell1/Spell1/dictionary.h
+	<stdbool.h>
+
+1474415057 source:/home/tgg/Desktop/ED/Spell1/Spell1/speller.c
+	<ctype.h>
+	<stdio.h>
+	<sys/resource.h>
+	<sys/time.h>
+	"dictionary.h"
+
