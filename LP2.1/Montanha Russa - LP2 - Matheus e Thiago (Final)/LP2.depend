@@ -1,0 +1,74 @@
+# depslib dependency file v1.0
+1493945278 source:c:\users\sgonzaganeto\desktop\aa\lp2\carro.cpp
+	"carro.h"
+	"passageiro.h"
+	<unistd.h>
+	<windows.h>
+
+1493944818 c:\users\sgonzaganeto\desktop\aa\lp2\carro.h
+	<iostream>
+	<thread>
+	<pthread.h>
+	"parque.h"
+	<mutex>
+
+1493940001 c:\users\sgonzaganeto\desktop\aa\lp2\parque.h
+
+1493937694 c:\users\sgonzaganeto\desktop\aa\lp2\atomico.h
+	<mutex>
+
+1493945095 source:c:\users\sgonzaganeto\desktop\aa\lp2\main.cpp
+	<iostream>
+	"passageiro.h"
+	"carro.h"
+	<thread>
+	<windows.h>
+	<cstdlib>
+
+1493945482 c:\users\sgonzaganeto\desktop\aa\lp2\passageiro.h
+	"carro.h"
+	<cstdlib>
+
+1493941610 source:c:\users\sgonzaganeto\desktop\aa\lp2\parque.cpp
+	"parque.h"
+
+1493943448 source:c:\users\sgonzaganeto\desktop\aa\lp2\passageiro.cpp
+	"passageiro.h"
+	<windows.h>
+	<iostream>
+
+1494003813 source:c:\users\sgonzaganeto\desktop\montanha russa - lp2 - matheus e thiago (final)\main.cpp
+	<iostream>
+	"passageiro.h"
+	"carro.h"
+	<thread>
+	<windows.h>
+	<cstdlib>
+
+1494002416 c:\users\sgonzaganeto\desktop\montanha russa - lp2 - matheus e thiago (final)\passageiro.h
+	"carro.h"
+	<cstdlib>
+
+1493944818 c:\users\sgonzaganeto\desktop\montanha russa - lp2 - matheus e thiago (final)\carro.h
+	<iostream>
+	<thread>
+	<pthread.h>
+	"parque.h"
+	<mutex>
+
+1494002369 c:\users\sgonzaganeto\desktop\montanha russa - lp2 - matheus e thiago (final)\parque.h
+
+1493941610 source:c:\users\sgonzaganeto\desktop\montanha russa - lp2 - matheus e thiago (final)\parque.cpp
+	"parque.h"
+
+1494004313 source:c:\users\sgonzaganeto\desktop\montanha russa - lp2 - matheus e thiago (final)\carro.cpp
+	"carro.h"
+	"passageiro.h"
+	<unistd.h>
+	<windows.h>
+
+1494002936 source:c:\users\sgonzaganeto\desktop\montanha russa - lp2 - matheus e thiago (final)\passageiro.cpp
+	"passageiro.h"
+	<windows.h>
+	<iostream>
+
