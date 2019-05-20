@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1493922938 source:c:\users\sgonzaganeto\desktop\teste lp2 (gabs)\teste\main.cpp
-	<stdio.h>
-	<stdlib.h>
-	<windows.h>
-	<pthread.h>
-

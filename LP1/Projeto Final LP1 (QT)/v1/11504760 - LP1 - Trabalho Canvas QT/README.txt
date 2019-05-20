@@ -1,4 +1,4 @@
-		Canvas in terminal
+Canvas in terminal
 
 To compile
 ----------
